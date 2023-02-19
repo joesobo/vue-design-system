@@ -15,6 +15,7 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "cva": "npm:class-variance-authority@^0.4.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {
@@ -28,8 +29,10 @@
     "@storybook/vue3": "^6.5.16",
     "@vitejs/plugin-vue": "^4.0.0",
     "babel-loader": "^8.3.0",
+    "clsx": "^1.2.1",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
+    "tailwindcss": "^3.2.7",
     "tsconfig": "workspace:*",
     "typescript": "^4.9.5",
     "vite": "^4.1.2",

@@ -8,9 +8,18 @@ node_modules
 # testing
 coverage
 
+# Nuxt
+.nuxt
+.output
+.vercel_build_output
+.build-*
+.env
+.netlify
+
 # build
 out/
 build
+dist
 
 # misc
 .DS_Store
@@ -22,11 +31,14 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# env files
+.env
 
 # turbo
 .turbo
+
+.npm
+.npmrc
+
+# Storybook build output
+storybook-static
