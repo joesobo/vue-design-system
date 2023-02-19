@@ -3,7 +3,7 @@ import './storybook.css';
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
 	darkMode: {
-    stylePreview: false,
+		current: 'dark',
   },
 	options: {
     storySort: {
