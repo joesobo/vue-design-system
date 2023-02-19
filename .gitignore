@@ -19,7 +19,6 @@ coverage
 # build
 out/
 build
-dist
 
 # misc
 .DS_Store
@@ -39,6 +38,3 @@ yarn-error.log*
 
 .npm
 .npmrc
-
-# Storybook build output
-storybook-static
