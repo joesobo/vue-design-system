@@ -1,5 +1,46 @@
 {
-  "extends": "tsconfig/react-library.json",
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "compilerOptions": {
+    // unreachable code is considered tech debt and should be removed
+    "allowUnreachableCode": false,
+    // labels aren't ever used and most likely indicate a syntax error
+    "allowUnusedLabels": false,
+    // use cases for fallthroughs are typically contrived and unintuitive, best to avoid them
+    "noFallthroughCasesInSwitch": true,
+    // help ensure extended classes are valid
+    "noImplicitOverride": true,
+    // ensure all code paths return the expected type
+    "noImplicitReturns": true,
+    // enable strict mode; implicit types/behaviors will raise errors
+    "strict": true,
+    // generates source maps
+    "sourceMap": true,
+    // encourage use of TypeScript
+    "allowJs": false,
+    // If no default export is present, all exports are imported
+    "allowSyntheticDefaultImports": true,
+    // fixes issue with how CommonJS code is imported
+    "esModuleInterop": true,
+    // imports from files are case sensitive
+    "forceConsistentCasingInFileNames": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "declaration": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "types": ["node", "vite/client", "jest", "@testing-library/jest-dom"]
+  },
+  "exclude": [
+    "**/*/node_modules",
+    "**/*.stories.ts",
+    "**/*/dist",
+    "**/*.config.ts",
+    "**/*.md"
+  ]
 }
