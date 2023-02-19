@@ -9,10 +9,11 @@
   ],
   "license": "MIT",
   "scripts": {
+    "lint": "eslint . --ext .vue,.js,.ts --fix",
     "typecheck": "vue-tsc --noEmit --skipLibCheck",
     "build": "vite build",
     "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook"
   },
   "dependencies": {
     "cva": "npm:class-variance-authority@^0.4.0",
@@ -20,17 +21,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
-    "@storybook/addon-actions": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
     "@storybook/builder-vite": "^0.4.2",
-    "@storybook/testing-library": "^0.0.13",
     "@storybook/vue3": "^6.5.16",
     "@vitejs/plugin-vue": "^4.0.0",
     "babel-loader": "^8.3.0",
     "clsx": "^1.2.1",
-    "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
     "tailwindcss": "^3.2.7",
     "tsconfig": "workspace:*",
