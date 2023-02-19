@@ -9,7 +9,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "lint": "eslint . --ext .vue,.js,.ts --fix",
+    "lint": "eslint --ext .js,.ts,.vue --fix",
     "prebuild": "rimraf ./dist",
     "build": "vite build && pnpm run build:types",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly",
