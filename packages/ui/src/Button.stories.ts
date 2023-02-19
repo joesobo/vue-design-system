@@ -7,10 +7,65 @@ export default {
 	title: 'Example/Button',
 	component: Button,
 	argTypes: {
-		onClick: {},
+		color: {
+			control: { type: 'select' },
+			options: [
+				undefined,
+				'default',
+				'alternative',
+				'dark',
+				'light',
+				'green',
+				'red',
+				'yellow',
+			],
+		},
+		gradient: {
+			control: { type: 'select' },
+			options: [
+				undefined,
+				'blue',
+				'green',
+				'cyan',
+				'teal',
+				'lime',
+				'red',
+				'pink',
+				'purple',
+				'purple-blue',
+				'cyan-blue',
+				'green-blue',
+				'purple-pink',
+				'pink-orange',
+				'teal-lime',
+				'red-yellow',
+			],
+		},
 		size: {
 			control: { type: 'select' },
-			options: ['small', 'medium', 'large'],
+			options: ['xs', 'sm', 'md', 'lg', 'xl'],
+		},
+		shadow: {
+			control: { type: 'select' },
+			options: [
+				undefined,
+				'blue',
+				'green',
+				'cyan',
+				'teal',
+				'lime',
+				'red',
+				'pink',
+				'purple',
+			],
+		},
+		pill: { control: { type: 'boolean' } },
+		outline: { control: { type: 'boolean' } },
+		disabled: { control: { type: 'boolean' } },
+		icon: { control: { type: 'text' } },
+		iconPosition: {
+			control: { type: 'select' },
+			options: [undefined, 'left', 'right'],
 		},
 	},
 } as Meta
@@ -24,25 +79,7 @@ const Template: Story<ButtonProps> = (args) => ({
 	template: '<Button v-bind="args" />',
 })
 
-export const Primary = Template.bind({})
-Primary.args = {
-	primary: true,
-	label: 'Button',
-}
-
-export const Secondary = Template.bind({})
-Secondary.args = {
-	label: 'Button',
-}
-
-export const Large = Template.bind({})
-Large.args = {
-	size: 'large',
-	label: 'Button',
-}
-
-export const Small = Template.bind({})
-Small.args = {
-	size: 'small',
+export const Playground = Template.bind({})
+Playground.args = {
 	label: 'Button',
 }

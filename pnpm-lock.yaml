@@ -43,6 +43,7 @@ importers:
   packages/ui:
     specifiers:
       '@babel/core': ^7.20.12
+      '@iconify/vue': ^4.1.0
       '@storybook/addon-essentials': ^6.5.16
       '@storybook/addon-interactions': ^6.5.16
       '@storybook/addon-links': ^6.5.16
@@ -69,6 +70,7 @@ importers:
       vue-tsc: 1.1.3_typescript@4.9.5
     devDependencies:
       '@babel/core': 7.20.12
+      '@iconify/vue': 4.1.0_vue@3.2.47
       '@storybook/addon-essentials': 6.5.16_jcmcjtganf35glbrwcfypemuay
       '@storybook/addon-interactions': 6.5.16_z44444ppltg7sm3lgaumi5bxry
       '@storybook/addon-links': 6.5.16_6l5554ty5ajsajah6yazvrjhoe
@@ -1875,6 +1877,19 @@ packages:
 
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+
+  /@iconify/types/2.0.0:
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+    dev: true
+
+  /@iconify/vue/4.1.0_vue@3.2.47:
+    resolution: {integrity: sha512-rBQVxNoSDooqgWkQg2MqkIHkH/huNuvXGqui5wijc1zLnU7TKzbBHW9VGmbnV4asNTmIHmqV4Nvt0M2rZ/9nHA==}
+    peerDependencies:
+      vue: '>=3'
+    dependencies:
+      '@iconify/types': 2.0.0
+      vue: 3.2.47
+    dev: true
 
   /@istanbuljs/load-nyc-config/1.1.0:
     resolution: {integrity: sha512-VjeHSlIzpv/NyD3N0YuHfXOPDIixcA1q2ZV98wsMqcYlPmv2n3Yb2lYP9XMElnaFVXg5A7YLTeLu6V84uQDjmQ==}
