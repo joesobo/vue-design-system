@@ -2,6 +2,9 @@
   "name": "vue-design-system",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -17,9 +20,5 @@
     "prettier": "latest",
     "turbo": "latest"
   },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "dependencies": {},
   "packageManager": "pnpm@7.26.3"
 }

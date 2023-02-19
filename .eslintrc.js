@@ -7,7 +7,7 @@ module.exports = {
 	extends: ['custom'],
 	settings: {
 		tailwindcss: {
-			config: 'packages/ui/tailwind.config.js',
+			config: 'packages/tailwind/index.js',
 			cssFiles: [
 				'**/*.css',
 				'!**/node_modules',

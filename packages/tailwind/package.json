@@ -1,0 +1,15 @@
+{
+  "name": "tailwind",
+  "version": "0.0.0",
+  "private": true,
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "tailwindcss": "^3.2.7",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^7.0.2",
+    "autoprefixer": "^10.4.13"
+  }
+}
