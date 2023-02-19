@@ -3,6 +3,7 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:vue/vue3-recommended',
 		'plugin:vuejs-accessibility/recommended',
+		'plugin:storybook/recommended',
 		'plugin:prettier/recommended',
 		'plugin:tailwindcss/recommended',
 	],

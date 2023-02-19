@@ -4,14 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.52.0",
-		"@typescript-eslint/parser": "^5.52.0",
-		"eslint": "^8.33.0",
-		"eslint-config-prettier": "^8.6.0",
-		"eslint-plugin-prettier": "^4.2.1",
-		"eslint-plugin-tailwindcss": "^3.8.3",
-		"eslint-plugin-vue": "^9.9.0",
-		"eslint-plugin-vuejs-accessibility": "^2.1.0"
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-storybook": "^0.6.10",
+    "eslint-plugin-tailwindcss": "^3.8.3",
+    "eslint-plugin-vue": "^9.9.0",
+    "eslint-plugin-vuejs-accessibility": "^2.1.0"
   },
   "devDependencies": {
     "typescript": "^4.7.4"

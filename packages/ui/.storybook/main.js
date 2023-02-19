@@ -1,18 +1,32 @@
 module.exports = {
-  "stories": [
+  stories: [
     "../src/**/*.stories.mdx",
     "../src/**/*.stories.@(js|ts)"
   ],
-  "addons": [
+  addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions"
   ],
-  "framework": "@storybook/vue3",
-  "core": {
-    "builder": "@storybook/builder-vite"
+  framework: "@storybook/vue3",
+  core: {
+    builder: "@storybook/builder-vite"
   },
-  "features": {
+  features: {
     "storyStoreV7": true
-  }
+  },
+	webpackFinal: async (config) => {
+		config.module.rules.push({
+			test: /\.css$/i,
+			use: [
+				{
+					loader: "postcss-loader",
+					options: { implementation: require.resolve("postcss") },
+				},
+			],
+			include: path.resolve(__dirname, "../"),
+		});
+		// Return the altered config
+		return config;
+	},
 }
