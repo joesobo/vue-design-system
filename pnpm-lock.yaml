@@ -51,7 +51,6 @@ importers:
       '@vitejs/plugin-vue': ^4.0.0
       autoprefixer: ^10.4.13
       babel-loader: ^8.3.0
-      clsx: ^1.2.1
       cva: npm:class-variance-authority@^0.4.0
       eslint-config-custom: workspace:*
       postcss: ^8.4.21
@@ -78,7 +77,6 @@ importers:
       '@vitejs/plugin-vue': 4.0.0_vite@4.1.2+vue@3.2.47
       autoprefixer: 10.4.13_postcss@8.4.21
       babel-loader: 8.3.0_la66t7xldg4uecmyawueag5wkm
-      clsx: 1.2.1
       eslint-config-custom: link:../eslint-config-custom
       postcss: 8.4.21
       postcss-loader: 7.0.2_6jdsrmfenkuhhw3gx4zvjlznce

@@ -31,7 +31,6 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
-    "clsx": "^1.2.1",
     "eslint-config-custom": "workspace:*",
     "postcss": "^8.4.21",
     "postcss-loader": "^7.0.2",
