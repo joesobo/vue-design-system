@@ -1,20 +1,73 @@
 version: 2.1
-orbs:
-  node: circleci/node@5.0.2
+
+jobs:
+  setup:
+    docker:
+      - image: cimg/node:19.5.0
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: pnpm-cache-v1-{{ checksum "pnpm-lock.yml" }}
+
+      - run:
+          name: 'Install dependencies'
+          command: npm i -g pnpm && pnpm install
+
+      - save_cache:
+          key: pnpm-cache-v1-{{ checksum "pnpm-lock.yml" }}
+          paths:
+            - node_modules
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./*
+
+  build:
+    docker:
+      - image: cimg/node:19.5.0
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: .
+
+      - run:
+          name: 'Build'
+          command: pnpm build
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./*
+
+  lint:
+    docker:
+      - image: cimg/node:19.5.0
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: .
+
+      - run:
+          name: 'Verify code quality and formatting'
+          command: pnpm lint
+
 workflows:
   test-and-build:
     jobs:
-      - lint
-jobs:
-  lint:
-    docker:
-      - image: cimg/node:lts
-    steps:
-      - checkout
-      - node/install-packages:
-      - run:
-          command: npm i -g pnpm
-      - run:
-          command: pnpm build
-      - run:
-          command: pnpm lint
+      - setup:
+          context: readonly-github-packages
+
+      - build:
+          requires:
+            - setup
+
+      - lint:
+          requires:
+            - build
