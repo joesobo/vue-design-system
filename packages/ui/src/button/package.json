@@ -11,7 +11,8 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue --fix",
     "prebuild": "rimraf ./dist",
-    "build": "vite build --config ../../vite.config.ts && pnpm run build:types",
+    "build": "pnpm run build:js && pnpm run build:types",
+    "build:js": "vite build",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly"
   },
   "devDependencies": {

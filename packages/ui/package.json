@@ -10,10 +10,11 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue --fix",
-    "build": "vite build && pnpm run build:types",
+    "build": "pnpm run build:js && pnpm run build:types && pnpm run build:storybook",
+    "build:js": "vite build",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly",
-    "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
-    "build-storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook"
+    "build:storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
+    "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006"
   },
   "dependencies": {
     "cva": "npm:class-variance-authority@^0.4.0",
