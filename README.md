@@ -19,6 +19,7 @@ Well I'm tired of having to recreate the same components over and over so I figu
 - Add testing library
 - Fill out example Button package
 - Playground for Nuxt
+- Histoire vs Storybook
 
 ### Running:
 - `pnpm install`
