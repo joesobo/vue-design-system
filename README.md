@@ -6,7 +6,7 @@ Well I'm tired of having to recreate the same components over and over so I figu
 - Monorepo built on TurboRepo
 - TailwindCSS
 - CVA
-- Storybook
+- Histoire
 - Iconify
 - Built with Vite
 - Modeled/Inspired on Flowbite
@@ -19,15 +19,14 @@ Well I'm tired of having to recreate the same components over and over so I figu
 - Add testing library
 - Fill out example Button package
 - Playground for Nuxt
-- Histoire vs Storybook
 
 ### Running:
 - `pnpm install`
 - `pnpm build`
 
-#### Run Storybook
+#### Run Histoire
 - `cd packages/ui`
-- `pnpm storybook`
+- `pnpm story:dev`
 
 #### Run Playground
 - `cd apps/vue-playground`

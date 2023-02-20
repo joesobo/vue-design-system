@@ -10,11 +10,12 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue --fix",
-    "build": "pnpm run build:js && pnpm run build:types && pnpm run build:storybook",
+    "build": "pnpm run build:js && pnpm run build:types && pnpm run story:build",
     "build:js": "vite build",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly",
-    "build:storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && build-storybook",
-    "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006"
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview"
   },
   "dependencies": {
     "cva": "npm:class-variance-authority@^0.4.0",
@@ -23,16 +24,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
+    "@histoire/plugin-vue": "^0.15.8",
     "@iconify/vue": "^4.1.0",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-interactions": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/builder-vite": "^0.4.2",
-    "@storybook/vue3": "^6.5.16",
     "@vitejs/plugin-vue": "^4.0.0",
     "babel-loader": "^8.3.0",
     "eslint-config-custom": "workspace:*",
-    "storybook-dark-mode": "^2.0.6",
+    "histoire": "^0.15.8",
     "tailwind": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "^4.9.5",

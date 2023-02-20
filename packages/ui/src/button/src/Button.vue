@@ -82,7 +82,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 const classes = computed(() => {
 	return cva(
 		[
-			'bg-red-500',
+			'bg-white',
 			'focus:ring-4',
 			'font-medium',
 			'px-5',
