@@ -10,6 +10,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue --fix",
+    "test": "vitest",
     "build": "pnpm run build:js && pnpm run build:types && pnpm run story:build",
     "build:js": "vite build",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly",
@@ -31,6 +32,7 @@
     "eslint-config-custom": "workspace:*",
     "histoire": "^0.15.8",
     "tailwind": "workspace:*",
+    "testing-library": "workspace:*",
     "tsconfig": "workspace:*",
     "typescript": "^4.9.5",
     "vite": "^4.1.2",

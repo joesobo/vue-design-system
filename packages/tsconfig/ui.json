@@ -37,6 +37,7 @@
   },
   "exclude": [
     "**/*/node_modules",
+    "**/*.spec.ts",
     "**/*.stories.ts",
     "**/*/dist",
     "**/*.config.ts",
