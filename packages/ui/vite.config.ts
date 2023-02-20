@@ -1,9 +1,5 @@
 import { defineConfig } from 'vite'
-import path from 'path'
 import vue from '@vitejs/plugin-vue'
-
-const packageFilePath = path.resolve(process.cwd(), 'package.json')
-const packageFile = require(packageFilePath)
 
 export default defineConfig({
 	plugins: [vue({ customElement: true })],
@@ -16,13 +12,7 @@ export default defineConfig({
 		cssCodeSplit: true,
 		emptyOutDir: true,
 		rollupOptions: {
-			// make sure to externalize deps that shouldn't be bundled
-			// into your library
-			external: [
-				...Object.keys(packageFile.dependencies || {}),
-				...Object.keys(packageFile.peerDependencies || {}),
-				'**/*.spec.ts',
-			],
+			external: ['**/*.spec.ts', '**/*.stories.ts'],
 		},
 	},
 	resolve: {

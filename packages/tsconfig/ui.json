@@ -16,7 +16,7 @@
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "strict": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

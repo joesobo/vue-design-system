@@ -3,5 +3,5 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "exclude": ["vite.config.ts"]
+  "exclude": ["vite.config.ts", "**/*.stories.ts"]
 }
