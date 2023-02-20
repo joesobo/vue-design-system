@@ -12,7 +12,7 @@
     "lint": "eslint --ext .js,.ts,.vue --fix",
     "prebuild": "rimraf ./dist",
     "build": "pnpm run build:js && pnpm run build:types",
-    "build:js": "vite build",
+    "build:js": "vite build --config ../../vite.config.ts",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly"
   },
   "devDependencies": {
