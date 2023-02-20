@@ -6,7 +6,9 @@
 			:class="iconClasses"
 		/>
 
-		{{ label }}
+		<p>
+			{{ label }}
+		</p>
 
 		<Icon
 			v-if="iconPosition === 'right' && icon"

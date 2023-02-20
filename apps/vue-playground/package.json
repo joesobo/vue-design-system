@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "ui": "workspace:*",
+    "button": "workspace:*",
     "vue": "^3.2.45"
   },
   "devDependencies": {

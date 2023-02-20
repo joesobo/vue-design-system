@@ -10,7 +10,6 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue --fix",
-    "prebuild": "rimraf ./dist",
     "build": "vite build && pnpm run build:types",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly",
     "storybook": "export SET NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",

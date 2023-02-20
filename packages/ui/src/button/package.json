@@ -1,0 +1,21 @@
+{
+  "name": "button",
+  "version": "0.0.0",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue --fix",
+    "prebuild": "rimraf ./dist",
+    "build": "vite build --config ../../vite.config.ts && pnpm run build:types",
+    "build:types": "vue-tsc --declaration --emitDeclarationOnly"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*"
+  }
+}

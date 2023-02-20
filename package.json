@@ -7,7 +7,8 @@
   },
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "packages/ui/src/*"
   ],
   "scripts": {
     "build": "turbo run build",
