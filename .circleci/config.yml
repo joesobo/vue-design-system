@@ -13,8 +13,8 @@ jobs:
       - checkout
       - node/install-packages:
       - run:
-        command: npm i -g pnpm
+          command: npm i -g pnpm
       - run:
-        command: pnpm build
+          command: pnpm build
       - run:
-        command: pnpm lint
+          command: pnpm lint
