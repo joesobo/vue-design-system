@@ -139,5 +139,5 @@ const initState = () => {
 <docs lang="md">
     # Button
 
-    This is a totally cool button
+    This is a totally cool button, that provides access to all the cool stuff.
 </docs>
