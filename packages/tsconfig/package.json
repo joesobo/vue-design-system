@@ -5,5 +5,8 @@
   "private": true,
   "files": [
     "base.json"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }

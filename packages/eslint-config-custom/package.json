@@ -2,9 +2,11 @@
   "name": "@poleski/eslint-config-custom",
   "version": "1.0.0",
   "homepage": "https://github.com/joesobo/vue-design-system#readme",
-  "private": true,
   "main": "index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",

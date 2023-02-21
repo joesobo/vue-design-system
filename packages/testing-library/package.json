@@ -2,13 +2,15 @@
   "name": "@poleski/testing-library",
   "version": "1.0.0",
   "homepage": "https://github.com/joesobo/vue-design-system#readme",
-  "private": true,
   "main": "dist/index.cjs.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist/**/*",
     "preset/**/*"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prebuild": "rimraf ./dist && rimraf ./preset",
     "build": "pnpm build:js && pnpm build:preset",

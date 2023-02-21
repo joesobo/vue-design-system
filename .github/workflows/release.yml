@@ -13,33 +13,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+
+      - name: Setup pnpm 7
+        uses: pnpm/action-setup@v2
         with:
-          # This makes Actions fetch all Git history so that Changesets can
-          # generate changelogs with the correct commits
-          fetch-depth: 0
-
-      - name: Creating .npmrc
-        run: |
-          cat << EOF > "$HOME/.npmrc"
-            @poleski:registry=https://npm.pkg.github.com/
-            //npm.pkg.github.com/:_authToken=$NPM_TOKEN
-
-            auto-install-peers=true
-            legacy-peer-deps=true
-            node-linker=hoisted
-          EOF
-        env:
-          # Because we're publishing to Github we can use secrets.CHANGESET_GITHUB_TOKEN for our NPM_TOKEN
-          NPM_TOKEN: ${{ secrets.CHANGESET_GITHUB_TOKEN }}
+          version: 7
 
       - name: Setup Node.js 16.x
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: 16.x
 
       - name: Install dependencies
-        run: npm install -g pnpm && pnpm install --frozen-lockfile
+        run: pnpm i
 
       - name: Create Release Pull Request or Publish
         # https://github.com/changesets/action
@@ -50,5 +37,4 @@ jobs:
           commit: "chore: release"
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGESET_GITHUB_TOKEN }}
-          # Because we're publishing to Github we can use secrets.CHANGESET_GITHUB_TOKEN for our NPM_TOKEN
-          NPM_TOKEN: ${{ secrets.CHANGESET_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.CHANGESET_NPM_TOKEN }}

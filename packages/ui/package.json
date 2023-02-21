@@ -10,11 +10,7 @@
   ],
   "license": "MIT",
   "publishConfig": {
-    "@poleski:registry": "https://npm.pkg.github.com/"
-  },
-  "repository": {
-    "url": "https://github.com/joesobo/vue-design-system.git",
-    "directory": "packages/ui"
+    "access": "public"
   },
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue --fix",
