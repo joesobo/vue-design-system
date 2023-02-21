@@ -1,6 +1,6 @@
 {
   "name": "@poleski/button",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/joesobo/vue-design-system#readme",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
