@@ -5,15 +5,6 @@
   "private": true,
   "main": "index.js",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:joesobo/vue-design-system.git",
-    "directory": "packages/ui/src/button"
-  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",

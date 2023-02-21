@@ -13,8 +13,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:joesobo/vue-design-system.git",
+    "url": "https://github.com/joesobo/vue-design-system.git",
     "directory": "packages/ui/src/button"
   },
   "scripts": {
