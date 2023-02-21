@@ -1,7 +1,16 @@
 {
   "name": "@poleski/tsconfig",
   "version": "0.0.0",
+  "homepage": "https://github.com/joesobo/vue-design-system#readme",
   "private": true,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:joesobo/vue-design-system.git",
+    "directory": "packages/ui/src/button"
+  },
   "files": [
     "base.json"
   ]

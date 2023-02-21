@@ -1,11 +1,20 @@
 {
   "name": "@poleski/tailwind",
   "version": "0.0.0",
+  "homepage": "https://github.com/joesobo/vue-design-system#readme",
   "private": true,
   "main": "index.js",
   "files": [
     "index.js"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:joesobo/vue-design-system.git",
+    "directory": "packages/ui/src/button"
+  },
   "devDependencies": {
     "tailwindcss": "^3.2.7",
     "postcss": "^8.4.21",
