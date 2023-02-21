@@ -1,5 +1,5 @@
 {
-  "name": "testing-library",
+  "name": "@poleski/testing-library",
   "version": "0.0.0",
   "private": true,
   "main": "dist/index.cjs.js",

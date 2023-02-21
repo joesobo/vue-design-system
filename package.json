@@ -17,7 +17,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
+    "@poleski/eslint-config-custom": "workspace:*",
     "prettier": "latest",
     "turbo": "latest"
   },

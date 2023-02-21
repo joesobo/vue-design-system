@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "@poleski/ui",
   "version": "0.0.0",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -29,11 +29,11 @@
     "@iconify/vue": "^4.1.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "babel-loader": "^8.3.0",
-    "eslint-config-custom": "workspace:*",
+    "@poleski/eslint-config-custom": "workspace:*",
     "histoire": "^0.15.8",
-    "tailwind": "workspace:*",
-    "testing-library": "workspace:*",
-    "tsconfig": "workspace:*",
+    "@poleski/tailwind": "workspace:*",
+    "@poleski/testing-library": "workspace:*",
+    "@poleski/tsconfig": "workspace:*",
     "typescript": "^4.9.5",
     "vite": "^4.1.2",
     "vue-loader": "^16.8.3"

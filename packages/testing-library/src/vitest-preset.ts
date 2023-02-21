@@ -10,7 +10,7 @@ const baseConfig: UserConfig = {
 	test: {
 		globals: true,
 		environment: 'jsdom',
-		setupFiles: ['node_modules/testing-library/preset/setupTests.js'],
+		setupFiles: ['node_modules/@poleski/testing-library/preset/setupTests.js'],
 		includeSource: ['**/*.spec.ts'],
 	},
 }
