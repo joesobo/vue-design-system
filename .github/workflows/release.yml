@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           # This makes Actions fetch all Git history so that Changesets can
           # generate changelogs with the correct commits
@@ -22,9 +22,8 @@ jobs:
       - name: Creating .npmrc
         run: |
           cat << EOF > "$HOME/.npmrc"
-            @me:registry=https://npm.pkg.github.com/
+            @poleski:registry=https://npm.pkg.github.com/
             //npm.pkg.github.com/:_authToken=$NPM_TOKEN
-            registry=http://registry.npmjs.org/
 
             auto-install-peers=true
             legacy-peer-deps=true
@@ -34,10 +33,10 @@ jobs:
           # Because we're publishing to Github we can use secrets.CHANGESET_GITHUB_TOKEN for our NPM_TOKEN
           NPM_TOKEN: ${{ secrets.CHANGESET_GITHUB_TOKEN }}
 
-      - name: Setup Node.js 19.x
-        uses: actions/setup-node@v2
+      - name: Setup Node.js 16.x
+        uses: actions/setup-node@v3
         with:
-          node-version: 19.x
+          node-version: 16.x
 
       - name: Install dependencies
         run: npm install -g pnpm && pnpm install --frozen-lockfile

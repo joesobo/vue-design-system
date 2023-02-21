@@ -1,12 +1,9 @@
 version: 2.1
 
-orbs:
-  node: circleci/node@5.0.2
-
 jobs:
   setup:
     docker:
-      - image: cimg/node:19.5.0
+      - image: cimg/node:16.17.0
 
     steps:
       - checkout
@@ -30,7 +27,7 @@ jobs:
 
   build:
     docker:
-      - image: cimg/node:19.5.0
+      - image: cimg/node:16.17.0
 
     steps:
       - checkout
@@ -49,7 +46,7 @@ jobs:
 
   lint:
     docker:
-      - image: cimg/node:19.5.0
+      - image: cimg/node:16.17.0
 
     steps:
       - checkout
@@ -63,7 +60,7 @@ jobs:
 
   test:
     docker:
-      - image: cimg/node:19.5.0
+      - image: cimg/node:16.17.0
 
     steps:
       - checkout
@@ -77,7 +74,7 @@ jobs:
 
   changeset:
     docker:
-      - image: cimg/node:19.5.0
+      - image: cimg/node:16.17.0
 
     steps:
       - checkout
