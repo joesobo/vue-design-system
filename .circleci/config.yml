@@ -61,6 +61,35 @@ jobs:
           name: 'Verify code quality and formatting'
           command: pnpm lint
 
+  test:
+    docker:
+      - image: cimg/node:19.5.0
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: .
+
+      - run:
+          name: 'Run unit tests'
+          command: pnpm test
+
+  changeset:
+    docker:
+      - image: cimg/node:19.5.0
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: .
+
+      - run:
+          name: 'Check for required changesets'
+          # id: changesets
+          command: pnpm changeset status --since-main
+
 workflows:
   test-and-build:
     jobs:
@@ -71,6 +100,17 @@ workflows:
           requires:
             - setup
 
+      - changeset:
+          requires:
+            - setup
+          filters:
+            branches:
+              ignore: 'changeset-release/main'
+
       - lint:
+          requires:
+            - build
+
+      - test:
           requires:
             - build

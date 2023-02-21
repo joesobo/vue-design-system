@@ -2,6 +2,7 @@
   "name": "vue-design-system",
   "version": "0.0.0",
   "private": true,
+  "packageManager": "pnpm@7.26.3",
   "engines": {
     "node": ">=14.0.0"
   },
@@ -14,12 +15,15 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "test": "turbo run test",
+    "release": "pnpm build && changeset publish",
+    "changeset": "changeset",
+    "changeset:empty": "changeset --empty"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.0",
     "@poleski/eslint-config-custom": "workspace:*",
     "prettier": "latest",
     "turbo": "latest"
-  },
-  "packageManager": "pnpm@7.26.3"
+  }
 }
