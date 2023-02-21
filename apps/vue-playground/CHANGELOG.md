@@ -1,5 +1,12 @@
 # vue-playground
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [c2a2c37]
+  - @poleski/ui@1.0.2
+
 ## 1.0.1
 
 ### Patch Changes
