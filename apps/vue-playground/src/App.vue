@@ -8,6 +8,6 @@
 </template>
 
 <script setup lang="ts">
-import { Button } from 'button'
-import { Button as UIButton } from 'ui'
+import { Button } from '@poleski/button'
+import { Button as UIButton } from '@poleski/ui'
 </script>

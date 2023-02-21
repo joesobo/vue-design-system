@@ -19,6 +19,7 @@ importers:
       '@poleski/button': workspace:*
       '@poleski/eslint-config-custom': workspace:*
       '@poleski/tailwind': workspace:*
+      '@poleski/tsconfig': workspace:*
       '@poleski/ui': workspace:*
       '@types/node': ^18.11.12
       '@vitejs/plugin-vue': ^4.0.0
@@ -35,6 +36,7 @@ importers:
     devDependencies:
       '@poleski/eslint-config-custom': link:../../packages/eslint-config-custom
       '@poleski/tailwind': link:../../packages/tailwind
+      '@poleski/tsconfig': link:../../packages/tsconfig
       '@types/node': 18.14.0
       '@vitejs/plugin-vue': 4.0.0_vite@4.1.2+vue@3.2.47
       '@vue/tsconfig': 0.1.3_@types+node@18.14.0
