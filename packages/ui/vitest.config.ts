@@ -1,3 +1,3 @@
-import { defineConfig } from 'testing-library'
+import { defineConfig } from '@poleski/testing-library'
 
 export default defineConfig({})
