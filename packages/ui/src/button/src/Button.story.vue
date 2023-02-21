@@ -1,19 +1,61 @@
 <template>
-	<Story>
-		<Variant title="Default">
-			<Button label="Click Me" @click="logEvent('Click', $event)" />
-		</Variant>
+	<Story auto-props-disabled>
+		<Variant title="Playground" :init-state="initState">
+			<template #default="{ state }">
+				<Button
+					:label="state.label"
+					:color="state.color"
+					:gradient="state.gradient"
+					:size="state.size"
+					:disabled="state.disabled"
+					:pill="state.pill"
+					:outline="state.outline"
+					:icon="state.icon"
+					:iconPosition="state.iconPosition"
+					@click="logEvent('Click', $event)"
+				/>
+			</template>
 
-		<Variant title="Disabled">
-			<Button label="Click Me" disabled @click="logEvent('Click', $event)" />
-		</Variant>
+			<template #controls="{ state }">
+				<HstText v-model="state.label" title="Label" />
 
-		<Variant title="Pill">
-			<Button label="Click Me" pill @click="logEvent('Click', $event)" />
-		</Variant>
+				<HstSelect
+					v-model="state.color"
+					title="Color"
+					:options="[...colors, 'undefined']"
+				/>
+				<HstSelect
+					v-model="state.gradient"
+					title="Gradient"
+					:options="[...gradients, 'undefined']"
+				/>
+				<HstSelect v-model="state.size" title="Size" :options="sizes" />
 
-		<Variant title="Outline">
-			<Button label="Click Me" outline @click="logEvent('Click', $event)" />
+				<HstCheckbox
+					v-model="state.disabled"
+					title="Disabled"
+					@update:modelValue="state.disabled = $event"
+				/>
+
+				<HstCheckbox
+					v-model="state.pill"
+					title="Pill"
+					@update:modelValue="state.pill = $event"
+				/>
+
+				<HstCheckbox
+					v-model="state.outline"
+					title="Outline"
+					@update:modelValue="state.outline = $event"
+				/>
+
+				<HstText v-model="state.icon" title="Icon" />
+				<HstSelect
+					v-model="state.iconPosition"
+					title="Icon Position"
+					:options="['left', 'right']"
+				/>
+			</template>
 		</Variant>
 
 		<Variant title="Colors">
@@ -50,6 +92,7 @@ import type { ButtonProps } from './Button.vue'
 
 type Gradients = Exclude<ButtonProps['gradient'], undefined>
 type Colors = Exclude<ButtonProps['color'], undefined>
+type Sizes = Exclude<ButtonProps['size'], undefined>
 
 const gradients: Gradients[] = [
 	'blue',
@@ -78,6 +121,19 @@ const colors: Colors[] = [
 	'red',
 	'yellow',
 ]
+
+const sizes: Sizes[] = ['xs', 'sm', 'md', 'lg', 'xl']
+
+const initState = () => {
+	return {
+		label: 'Click Me!',
+		color: 'default',
+		gradient: undefined,
+		disabled: false,
+		pill: false,
+		outline: false,
+	}
+}
 </script>
 
 <docs lang="md">

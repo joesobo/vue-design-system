@@ -16,6 +16,7 @@ module.exports = {
 		'linebreak-style': ['error', 'unix'],
 		'vue/multi-word-component-names': 'off',
 		'vue/attribute-hyphenation': 'off',
+		'vue/v-on-event-hyphenation': 'off',
 		'prettier/prettier': [
 			'error',
 			{

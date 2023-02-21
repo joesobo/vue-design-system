@@ -4,7 +4,11 @@ Well I'm tired of having to recreate the same components over and over so I figu
 
 ### Details:
 - Monorepo built on TurboRepo
-- TailwindCSS
+- Tailwind Package
+- Eslint Package
+- TSConfig Package
+- Testing Library Package
+- Playground for Vite/Vue 3
 - CVA
 - Histoire
 - Iconify
@@ -13,10 +17,8 @@ Well I'm tired of having to recreate the same components over and over so I figu
 - UI components multiple install options
 	- Install full UI package
 	- Install individual component package
-- Playground for Vite
 
 ### Todo:
-- Add testing library
 - Fill out example Button package
 - Playground for Nuxt
 
