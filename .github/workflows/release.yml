@@ -19,6 +19,10 @@ jobs:
         run: |
           cat << EOF > "$HOME/.npmrc"
             //registry.npmjs.org/:_authToken=$NPM_TOKEN
+
+            auto-install-peers=true
+            legacy-peer-deps=true
+            node-linker=hoisted
           EOF
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

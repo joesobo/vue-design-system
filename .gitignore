@@ -38,6 +38,7 @@ yarn-error.log*
 .turbo
 
 .npm
+.npmrc
 
 # Storybook build output
 storybook-static
