@@ -19,6 +19,19 @@ jobs:
           # generate changelogs with the correct commits
           fetch-depth: 0
 
+      - name: Creating .npmrc
+        run: |
+          cat << EOF > "$HOME/.npmrc"
+            //npm.pkg.github.com/:_authToken=$NPM_TOKEN
+
+            auto-install-peers=true
+            legacy-peer-deps=true
+            node-linker=hoisted
+          EOF
+        env:
+          # Because we're publishing to Github we can use secrets.CHANGESET_GITHUB_TOKEN for our NPM_TOKEN
+          NPM_TOKEN: ${{ secrets.CHANGESET_GITHUB_TOKEN }}
+
       - name: Setup Node.js 19.x
         uses: actions/setup-node@v2
         with:
