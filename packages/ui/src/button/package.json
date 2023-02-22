@@ -12,6 +12,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "directory": "packages/ui/src/button"
+  },
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue --fix",
     "prebuild": "rimraf ./dist",

@@ -11,6 +11,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "directory": "packages/testing-library"
+  },
   "scripts": {
     "prebuild": "rimraf ./dist && rimraf ./preset",
     "build": "pnpm build:js && pnpm build:preset",

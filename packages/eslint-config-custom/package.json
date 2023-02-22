@@ -7,6 +7,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "directory": "packages/eslint-config-custom"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
