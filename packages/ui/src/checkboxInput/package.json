@@ -1,0 +1,27 @@
+{
+  "name": "@poleski/checkbox-input",
+  "version": "0.0.0",
+  "homepage": "https://github.com/joesobo/vue-design-system#readme",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue --fix",
+    "prebuild": "rimraf ./dist",
+    "build": "pnpm run build:js && pnpm run build:types",
+    "build:js": "vite build --config ../../vite.config.ts",
+    "build:types": "vue-tsc --declaration --emitDeclarationOnly"
+  },
+  "devDependencies": {
+    "@poleski/eslint-config-custom": "workspace:*",
+    "@poleski/tsconfig": "workspace:*",
+    "@vueuse/core": "^9.12.0"
+  }
+}

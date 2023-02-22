@@ -4,8 +4,7 @@
 
 ### Patch Changes
 
-- c7824e8: Test changeset to verify publishing
-- 9a2b4bd: scope namescape for testing library
+- 9a2b4bd: scope namespace for testing library
 
 ## 1.0.0
 

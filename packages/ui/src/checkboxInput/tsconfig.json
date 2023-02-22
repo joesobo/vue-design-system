@@ -1,0 +1,7 @@
+{
+  "extends": "@poleski/tsconfig/ui.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "exclude": ["**/*.stories.ts", "**/*.spec.ts"]
+}
