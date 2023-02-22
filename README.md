@@ -17,6 +17,8 @@ Well I'm tired of having to recreate the same components over and over so I figu
 - UI components multiple install options
 	- Install full UI package
 	- Install individual component package
+- CircleCI
+- Changesets
 
 ### Todo:
 - Fill out example Button package
