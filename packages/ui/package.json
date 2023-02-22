@@ -14,7 +14,7 @@
   },
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue --fix",
-    "test": "vitest",
+    "test": "vitest --threads --run",
     "build": "pnpm run build:js && pnpm run build:types && pnpm run story:build",
     "build:js": "vite build",
     "build:types": "vue-tsc --declaration --emitDeclarationOnly",
