@@ -73,7 +73,7 @@ jobs:
 
       - run:
           name: 'Run unit tests'
-          command: pnpm test
+          command: cd packages/ui && pnpm vitest --threads --run
 
   changeset:
     docker:
