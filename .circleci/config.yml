@@ -40,7 +40,7 @@ jobs:
 
       - run:
           name: 'Build'
-          command: pnpm build
+          command: turbo run build
 
       - persist_to_workspace:
           root: .
@@ -59,7 +59,7 @@ jobs:
 
       - run:
           name: 'Verify code quality and formatting'
-          command: pnpm lint
+          command: turbo run lint
 
   test:
     docker:
@@ -73,7 +73,7 @@ jobs:
 
       - run:
           name: 'Run unit tests'
-          command: cd packages/ui && pnpm install && pnpm test -- --threads
+          command: turbo run test
 
   changeset:
     docker:
