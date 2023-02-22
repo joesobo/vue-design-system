@@ -73,7 +73,7 @@ jobs:
 
       - run:
           name: 'Run unit tests'
-          command: cd packages/ui && pnpm test -- --threads
+          command: cd packages/ui && pnpm install && pnpm test -- --threads
 
   changeset:
     docker:
