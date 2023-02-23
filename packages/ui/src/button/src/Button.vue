@@ -85,8 +85,6 @@ const classes = computed(() => {
 			'bg-white',
 			'focus:ring-4',
 			'font-medium',
-			'mr-2',
-			'mb-2',
 			'focus:outline-none',
 			'flex',
 			'justify-center',
@@ -136,11 +134,11 @@ const classes = computed(() => {
 						'text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800',
 				},
 				size: {
-					xs: 'text-xs px-4 py-2',
+					xs: 'text-xs px-2 py-1',
 					sm: 'text-xs px-4 py-2',
 					md: 'text-sm px-5 py-2.5',
 					lg: 'text-base px-6 py-3',
-					xl: 'text-base px-6 py-3',
+					xl: 'text-base px-8 py-4',
 				},
 				shadow: {
 					blue: 'shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80',
