@@ -1,5 +1,5 @@
 <template>
-	<Story auto-props-disabled>
+	<Story>
 		<Variant title="Playground" :init-state="initState">
 			<template #default="{ state }">
 				<Button

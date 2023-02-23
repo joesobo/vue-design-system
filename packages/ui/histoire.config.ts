@@ -11,7 +11,30 @@ export default defineConfig({
 			light: './public/favicon.ico',
 			dark: './public/favicon.ico',
 		},
-		logoHref: 'https://acme.com',
+		logoHref: 'https://github.com/joesobo/vue-design-system',
 		favicon: './public/favicon.ico',
 	},
+	defaultStoryProps: {
+		autoPropsDisabled: true,
+	},
+	tree: {
+    groups: [
+      {
+        id: 'top',
+        title: '', // No toggle
+      },
+      // {
+      //   title: 'Design System',
+      //   include: file => /Tailwind/.test(file.title),
+      // },
+      {
+        title: 'Components',
+        include: file => !file.title.includes('Serialize'),
+      },
+      {
+        title: 'Others',
+        include: file => true,
+      },
+    ],
+  },
 })

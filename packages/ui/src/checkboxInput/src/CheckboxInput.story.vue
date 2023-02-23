@@ -1,13 +1,17 @@
 <template>
-	<Story auto-props-disabled>
+	<Story>
 		<Variant title="Playground" :init-state="initState">
 			<template #default="{ state }">
-				<CheckboxInput
-					v-model="checkboxState"
-					:label="state.label"
-					@update="logEvent('Click', $event)"
-				/>
-				{{ checkboxState }}
+				<div class="flex">
+					<CheckboxInput
+						v-model="checkboxState"
+						:label="state.label"
+						@update="logEvent('Click', $event)"
+					/>
+					<p class="ml-2 dark:text-white">
+						{{ checkboxState }}
+					</p>
+				</div>
 			</template>
 
 			<template #controls="{ state }">

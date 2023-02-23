@@ -1,5 +1,6 @@
 ---
 icon: 'mdi:lighthouse'
+group: 'top'
 ---
 
 # Welcome
