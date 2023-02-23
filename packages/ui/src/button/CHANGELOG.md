@@ -1,5 +1,11 @@
 # @poleski/button
 
+## 1.0.2
+
+### Patch Changes
+
+- 72cd176: Remove padding
+
 ## 1.0.1
 
 ### Patch Changes
