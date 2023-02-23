@@ -1,6 +1,7 @@
 version: 2.1
-# orbs:
-#   node: circleci/node@5.0.2
+orbs:
+  node: circleci/node@5.1.0
+
 workflows:
   test-and-build:
     jobs:
@@ -10,11 +11,9 @@ workflows:
               ignore: 'changeset-release/main'
 jobs:
   ci_verify:
-    docker:
-      - image: cimg/node:lts
+    executor: node/default
     steps:
       - checkout
-      # - node/install-packages:
       - run:
         command: npm i -g pnpm
       - run:
