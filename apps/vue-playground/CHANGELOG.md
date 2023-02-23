@@ -1,5 +1,12 @@
 # vue-playground
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies [dcff6dd]
+  - @poleski/button@1.0.3
+
 ## 1.0.3
 
 ### Patch Changes

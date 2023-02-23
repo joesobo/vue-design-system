@@ -1,5 +1,11 @@
 # @poleski/button
 
+## 1.0.3
+
+### Patch Changes
+
+- dcff6dd: Add padding for xs and xl and remove margin
+
 ## 1.0.2
 
 ### Patch Changes
