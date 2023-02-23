@@ -26,7 +26,7 @@ jobs:
           key: pnpm-cache-v1-{{ checksum "pnpm-lock.yaml" }}
           paths:
             - node_modules
-      - run: pnpm build
+      - run: pnpm build -vvv
       - run: pnpm lint
       - run: pnpm test
       - run: pnpm changeset status --since-main
