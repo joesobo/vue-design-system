@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@poleski/eslint-config-custom": "workspace:*",
-    "@poleski/tsconfig": "workspace:*"
+    "@poleski/tsconfig": "workspace:*",
+    "vite": "^4.1.2"
   }
 }
