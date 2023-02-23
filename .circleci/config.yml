@@ -1,116 +1,28 @@
 version: 2.1
-
 orbs:
   node: circleci/node@5.0.2
-
-jobs:
-  setup:
-    docker:
-      - image: cimg/node:19.5.0
-
-    steps:
-      - checkout
-
-      - restore_cache:
-          key: pnpm-cache-v1-{{ checksum "pnpm-lock.yaml" }}
-
-      - run:
-          name: 'Install dependencies'
-          command: pnpm install --no-frozen-lockfile
-
-      - save_cache:
-          key: pnpm-cache-v1-{{ checksum "pnpm-lock.yaml" }}
-          paths:
-            - node_modules
-
-      - persist_to_workspace:
-          root: .
-          paths:
-            - ./*
-
-  build:
-    docker:
-      - image: cimg/node:19.5.0
-
-    steps:
-      - checkout
-
-      - attach_workspace:
-          at: .
-
-      - run:
-          name: 'Build'
-          command: pnpm build
-
-      - persist_to_workspace:
-          root: .
-          paths:
-            - ./*
-
-  lint:
-    docker:
-      - image: cimg/node:19.5.0
-
-    steps:
-      - checkout
-
-      - attach_workspace:
-          at: .
-
-      - run:
-          name: 'Verify code quality and formatting'
-          command: pnpm lint
-
-  test:
-    docker:
-      - image: cimg/node:19.5.0
-
-    steps:
-      - checkout
-
-      - attach_workspace:
-          at: .
-
-      - run:
-          name: 'Run unit tests'
-          command: pnpm test
-
-  changeset:
-    docker:
-      - image: cimg/node:19.5.0
-
-    steps:
-      - checkout
-
-      - attach_workspace:
-          at: .
-
-      - run:
-          name: 'Check for required changesets'
-          # id: changesets
-          command: pnpm changeset status --since-main
-
 workflows:
   test-and-build:
     jobs:
-      - setup:
-          context: readonly-github-packages
-
-      - build:
-          requires:
-            - setup
-
-      - changeset:
-          requires:
-            - setup
+      - ci_verify:
           filters:
             branches:
               ignore: 'changeset-release/main'
-
-      - lint:
-          requires:
-            - build
-
-      - test:
-          requires:
-            - build
+jobs:
+  ci_verify:
+    docker:
+      - image: cimg/node:lts
+    steps:
+      - checkout
+      - node/install-packages:
+      - run:
+        command: npm i -g pnpm
+      - run:
+        command: pnpm build
+      - run:
+        command: pnpm lint
+      - run:
+        command: pnpm test
+      - run:
+        name: 'Check for required changesets'
+        command: pnpm changeset status --since-main
