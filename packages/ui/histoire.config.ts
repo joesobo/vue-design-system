@@ -23,10 +23,6 @@ export default defineConfig({
         id: 'top',
         title: '', // No toggle
       },
-      // {
-      //   title: 'Design System',
-      //   include: file => /Tailwind/.test(file.title),
-      // },
       {
         title: 'Components',
         include: file => !file.title.includes('Serialize'),
