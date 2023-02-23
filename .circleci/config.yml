@@ -11,17 +11,17 @@ jobs:
     steps:
       - checkout
 
-      # - restore_cache:
-      #     key: pnpm-cache-v1-{{ checksum "pnpm-lock.yaml" }}
+      - restore_cache:
+          key: pnpm-cache-v1-{{ checksum "pnpm-lock.yaml" }}
 
       - run:
           name: 'Install dependencies'
           command: pnpm install --no-frozen-lockfile
 
-      # - save_cache:
-      #     key: pnpm-cache-v1-{{ checksum "pnpm-lock.yaml" }}
-      #     paths:
-      #       - node_modules
+      - save_cache:
+          key: pnpm-cache-v1-{{ checksum "pnpm-lock.yaml" }}
+          paths:
+            - node_modules
 
       - persist_to_workspace:
           root: .
@@ -111,6 +111,6 @@ workflows:
           requires:
             - build
 
-      # - test:
-      #     requires:
-      #       - build
+      - test:
+          requires:
+            - build

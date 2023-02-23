@@ -6,11 +6,10 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".histoire/dist/**"]
     },
-    "lint": {
-      "outputs": []
-    },
+    "lint": {},
     "test": {
-      "outputs": []
+      "inputs": ["**/*.ts", "**/*.vue"],
+      "dependsOn": ["build"]
     },
     "dev": {
       "cache": false
