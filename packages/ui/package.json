@@ -28,6 +28,7 @@
   "dependencies": {
     "@types/node": "^18.11.12",
     "cva": "npm:class-variance-authority@^0.4.0",
+    "@poleski/testing-library": "workspace:*",
     "vue-tsc": "^1.1.3"
   },
   "devDependencies": {
@@ -36,7 +37,6 @@
     "@iconify/vue": "^4.1.0",
     "@poleski/eslint-config-custom": "workspace:*",
     "@poleski/tailwind": "workspace:*",
-    "@poleski/testing-library": "workspace:*",
     "@poleski/tsconfig": "workspace:*",
     "@vitejs/plugin-vue": "^4.0.0",
     "babel-loader": "^8.3.0",
