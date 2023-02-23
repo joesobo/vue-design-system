@@ -1,6 +1,6 @@
 version: 2.1
-orbs:
-  node: circleci/node@5.0.2
+# orbs:
+#   node: circleci/node@5.0.2
 workflows:
   test-and-build:
     jobs:
@@ -14,7 +14,7 @@ jobs:
       - image: cimg/node:lts
     steps:
       - checkout
-      - node/install-packages:
+      # - node/install-packages:
       - run:
         command: npm i -g pnpm
       - run:
