@@ -20,13 +20,15 @@
     "build:js": "vite build",
     "build:preset": "vite build --c ./vite.config.preset.ts"
   },
+  "dependencies": {
+    "vitest": "^0.28.5"
+  },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/user-event": "^14.4.3",
     "@testing-library/vue": "^6.6.1",
     "deepmerge": "^4.3.0",
     "jsdom": "^21.1.0",
-    "vite": "^4.1.3",
-    "vitest": "^0.28.5"
+    "vite": "^4.1.3"
   }
 }
