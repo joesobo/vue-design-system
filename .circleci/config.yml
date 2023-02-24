@@ -14,9 +14,11 @@ jobs:
     executor: node/default
     steps:
       - checkout
+
       - run:
           name: Install pnpm
           command: sudo npm i -g pnpm
+
       - restore_cache:
           key: pnpm-cache-v1-{{ checksum "pnpm-lock.yaml" }}
       - run:
@@ -26,7 +28,19 @@ jobs:
           key: pnpm-cache-v1-{{ checksum "pnpm-lock.yaml" }}
           paths:
             - node_modules
-      - run: pnpm build -vvv
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./*
+
+      - attach_workspace:
+          at: .
+      - run: pnpm build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./*
+
       - run: pnpm lint
       - run: pnpm test
       - run: pnpm changeset status --since-main
