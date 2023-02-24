@@ -5,12 +5,29 @@ orbs:
 workflows:
   test-and-build:
     jobs:
-      - ci_verify:
+      - setup:
+          context: readonly-github-packages
+
+      - build:
+          requires:
+            - setup
+
+      - lint:
+          requires:
+            - build
+
+      - test:
+          requires:
+            - build
+
+      - changeset:
+          requires:
+            - setup
           filters:
             branches:
               ignore: 'changeset-release/main'
 jobs:
-  ci_verify:
+  setup:
     executor: node/default
     steps:
       - checkout
@@ -33,14 +50,62 @@ jobs:
           paths:
             - ./*
 
+  build:
+    executor: node/default
+    steps:
+      - checkout
+
       - attach_workspace:
           at: .
+
       - run: pnpm build
+
       - persist_to_workspace:
           root: .
           paths:
             - ./*
 
+  lint:
+    executor: node/default
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: .
+
       - run: pnpm lint
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./*
+
+  test:
+    executor: node/default
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: .
+
       - run: pnpm test
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./*
+
+  changeset:
+    executor: node/default
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: .
+
       - run: pnpm changeset status --since-main
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./*
