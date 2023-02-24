@@ -42,5 +42,5 @@ jobs:
             - ./*
 
       - run: pnpm lint
-      - run: cd package/ui && pn i && pnpm test
+      - run: cd packages/ui && pn i && pnpm test
       - run: pnpm changeset status --since-main
