@@ -1,5 +1,11 @@
 # @poleski/ui
 
+## 1.0.3
+
+### Patch Changes
+
+- 01c2e36: Remove vue as dependency
+
 ## 1.0.2
 
 ### Patch Changes
