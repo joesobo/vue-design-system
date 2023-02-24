@@ -1,31 +1,6 @@
 version: 2.1
 orbs:
   node: circleci/node@5.1.0
-
-workflows:
-  test-and-build:
-    jobs:
-      - setup:
-          context: readonly-github-packages
-
-      - build:
-          requires:
-            - setup
-
-      - lint:
-          requires:
-            - build
-
-      - test:
-          requires:
-            - build
-
-      - changeset:
-          requires:
-            - setup
-          filters:
-            branches:
-              ignore: 'changeset-release/main'
 jobs:
   setup:
     executor: node/default
@@ -97,3 +72,28 @@ jobs:
           at: .
 
       - run: pnpm changeset status --since-main
+
+workflows:
+  test-and-build:
+    jobs:
+      - setup:
+          context: readonly-github-packages
+
+      - build:
+          requires:
+            - setup
+
+      - lint:
+          requires:
+            - build
+
+      - test:
+          requires:
+            - build
+
+      - changeset:
+          requires:
+            - setup
+          filters:
+            branches:
+              ignore: 'changeset-release/main'
