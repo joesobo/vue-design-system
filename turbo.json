@@ -1,18 +1,19 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".histoire/dist/**"]
     },
-    "lint": {},
+    "lint": {
+      "outputs": []
+    },
     "test": {
-      "inputs": ["**/*.ts", "**/*.vue"],
-      "dependsOn": ["build"]
+      "outputs": []
     },
     "dev": {
       "cache": false
     }
-  }
+  },
+  "globalDependencies": ["pnpm-lock.yaml"]
 }

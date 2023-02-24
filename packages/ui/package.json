@@ -27,8 +27,7 @@
   },
   "dependencies": {
     "@types/node": "^18.11.12",
-    "cva": "npm:class-variance-authority@^0.4.0",
-    "@poleski/testing-library": "workspace:*"
+    "cva": "npm:class-variance-authority@^0.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
