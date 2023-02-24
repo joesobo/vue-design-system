@@ -83,11 +83,11 @@ workflows:
           requires:
             - setup
 
-      - lint:
+      - test:
           requires:
             - build
 
-      - test:
+      - lint:
           requires:
             - build
 
